@@ -14,3 +14,7 @@
 // 3. Block Files
 @import "blocks";
 @import "block-hero";
+body {
+  font-family: $proximaNova;
+  color: $brandBase;
+}

@@ -129,11 +129,22 @@ img {
   display: -ms-flexbox;
   display: flex;
   width: 100%;
-  padding: 3rem 1.5rem; }
+  padding: 3rem 1.5rem;
+  font-size: 20px; }
+
+.block.hero {
+  padding: 4.5rem; }
 
 .block.hero article {
   max-width: 60rem;
-  margin: 0 auto; }
+  margin: 0 auto;
+  text-align: center; }
 
 .block.hero h1 {
-  color: #a60311; }
+  color: #a60311;
+  font-family: "futura-pt";
+  margin-bottom: 1.5rem; }
+
+body {
+  font-family: "proxima-nova";
+  color: #334667; }

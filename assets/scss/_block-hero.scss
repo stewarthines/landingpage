@@ -2,11 +2,15 @@
 //===========
 // Stewart Hines | September 2015
 .block.hero {
+  padding: $spacingLG;
   article {
     max-width: $wrapperWidth;
     margin: 0 auto;
+    text-align: center;
   }
   h1 {
     color: $brandAlt;
+    font-family: $futuraPT;
+    margin-bottom: $spacingBase;
   }
 }
