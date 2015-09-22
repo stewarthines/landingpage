@@ -1,0 +1,12 @@
+// Hero Block
+//===========
+// Stewart Hines | September 2015
+.block.hero {
+  article {
+    max-width: $wrapperWidth;
+    margin: 0 auto;
+  }
+  h1 {
+    color: $brandAlt;
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "name": "landingpage",
+  "version": "1.0.0",
+  "description": "landing page for fieldsavvy",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "gulp"
+  },
+  "author": "stewart hines",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.9.6",
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^3.0.1",
+    "gulp-jshint": "^1.11.2",
+    "gulp-livereload": "^3.8.0",
+    "gulp-sass": "^2.0.4"
+  }
+}

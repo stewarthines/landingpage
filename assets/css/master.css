@@ -1,0 +1,139 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: none;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box; }
+
+html,
+body {
+  height: 100%;
+  box-sizing: border-box;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #2b2b2b;
+  line-height: 1.5rem;
+  font-size: 1rem;
+  font-weight: 300;
+  letter-spacing: 0.09em; }
+
+h1,
+.h1 {
+  font-size: 2.75rem;
+  line-height: 3rem;
+  margin-top: 3rem;
+  margin-bottom: 1.5rem; }
+
+h2,
+.h2 {
+  font-size: 1.9375rem;
+  line-height: 3rem;
+  margin-top: 3rem;
+  margin-bottom: 1.5rem; }
+
+h3,
+.h3 {
+  font-size: 1.375rem;
+  line-height: 1.5rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem; }
+
+p,
+ul,
+ol,
+pre,
+table,
+blockquote {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem; }
+
+a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #0f93f5; }
+
+a:hover {
+  color: #065a98; }
+
+a:visited {
+  color: #0877c9; }
+
+ul,
+ol {
+  list-style: none; }
+
+strong,
+.bold {
+  font-weight: 500; }
+
+small,
+.small {
+  font-size: smaller; }
+
+blockquote {
+  font-size: 1.375rem;
+  line-height: 1.5rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  font-style: italic;
+  font-weight: lighter;
+  color: #d4d4d4; }
+
+hr {
+  display: block;
+  border: none;
+  outline: none;
+  width: 88%;
+  margin: 1rem auto;
+  height: 1px;
+  background: #d4d4d4; }
+
+.text-center {
+  text-align: center; }
+
+.text-left {
+  text-align: left; }
+
+.text-right {
+  text-align: right; }
+
+.text-secondary {
+  color: #7f7f7f; }
+
+.text-lead {
+  font-size: 1.375rem;
+  line-height: 1.5rem; }
+
+.text-action {
+  color: #0f93f5; }
+
+.text-danger {
+  color: #f44336; }
+
+.text-success {
+  color: #46af4a; }
+
+.text-warning {
+  color: #ff9800; }
+
+.list-clear {
+  margin: 0;
+  padding: 0; }
+
+img {
+  border: 0; }
+
+.block {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  padding: 3rem 1.5rem; }
+
+.block.hero article {
+  max-width: 60rem;
+  margin: 0 auto; }
+
+.block.hero h1 {
+  color: #a60311; }
