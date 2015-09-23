@@ -1,0 +1,52 @@
+// Global header
+//==============
+// Stewart Hines September 2015
+header[role="banner"] {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 100%;
+    padding: $spacingMD 0;
+    div {
+        flex: 1;
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+        align-self: center;
+        justify-content: center;
+        max-width: $wrapperWidth;
+        margin: 0 auto;
+        a {
+            flex: 1;
+            align-self: center;
+            order: 1;
+            img {
+                display: block;
+                width: 233px;
+            }
+        }
+        nav {
+            flex: 1;
+            align-self: center;
+            order: 2;
+            text-align: right;
+        }
+    }
+    @media screen and (max-width:720px) {
+        width: 100%;
+        border-bottom: 1px solid $borderColor;
+        padding: $spacingBase;
+        a {
+            img {
+                width: 155px;
+                max-width: 155px;
+            }
+        }
+        nav {
+            display: none;
+        }
+    }
+}
+header[role="banner"] nav a {
+    font-family: $futuraPT;
+}

@@ -75,20 +75,20 @@ $brandAltDark: #73020c;
 //-- C. Positioning Extensions --//
 %clearfix {
 
-  // Thanks Treehouse!
-  &:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
+    // Thanks Treehouse!
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
 }
 %pull-right {
-  display: inline-block;
-  float: right;
+    display: inline-block;
+    float: right;
 }
 %pull-left {
-  display: inline-block;
-  float: left;
+    display: inline-block;
+    float: left;
 }
 
 // -- D. Typography Variables --//
@@ -99,50 +99,51 @@ $borderRadius: 4px;
 
 //==== 2. Main Elements ====//
 * {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  outline: none;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  -o-box-sizing: border-box;
-  -ms-box-sizing: border-box;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: none;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
 }
 html,
 body {
-  height: 100%;
-  box-sizing: border-box;
-  font-family: $fontFamily;
-  color: $fontColor;
-  line-height: $spacingBase;
-  font-size: $spacingSM;
-  font-weight: 300;
-  letter-spacing: 0.09em;
+    height: 100%;
+    box-sizing: border-box;
+    font-family: $fontFamily;
+    color: $fontColor;
+    line-height: $spacingBase;
+    font-size: $spacingSM;
+    font-weight: 300;
+    letter-spacing: 0.09em;
 }
 
 //==== 3. Typography ====//
 // Headings
 h1,
 .h1 {
-  font-size: 2.75rem; //44px
-  line-height: $spacingMD; //48px
-  margin-top: $spacingMD;
-  margin-bottom: $spacingBase; //24px
+    font-size: 2.75rem; //44px
+    line-height: $spacingMD; //48px
+    margin-top: $spacingMD;
+    margin-bottom: $spacingBase; //24px
 }
 h2,
 .h2 {
-  font-size: 1.9375rem; //31px
-  line-height: $spacingMD;
-  margin-top: $spacingMD;
-  margin-bottom: $spacingBase;
+    font-size: 1.9375rem; //31px
+    line-height: $spacingMD;
+    margin-top: $spacingMD;
+    margin-bottom: $spacingBase;
 }
 h3,
 .h3 {
-  font-size: 1.375rem; //22px
-  line-height: $spacingBase;
-  margin-top: $spacingBase;
-  margin-bottom: $spacingBase;
+    font-size: 1.25rem; //22px
+    line-height: $spacingBase;
+    margin-top: $spacingBase;
+    margin-bottom: $spacingBase;
+    font-weight: 500;
 }
 
 // Paragraphs
@@ -152,55 +153,57 @@ ol,
 pre,
 table,
 blockquote {
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
 }
 
 // Links
 a {
-  text-decoration: none;
-  font-weight: bold;
-  color: $action;
-  &:hover {
-    color: darken($action, 20);
-  }
-  &:visited {
-    color: darken($action, 10);
-  }
+    text-decoration: none;
+    font-weight: 400;
+    color: $brandBase;
+    transition: color 250ms ease-in-out;
+    &:hover {
+        color: lighten($brandBase, 30%);
+        transition: color 250ms ease-in-out;
+    }
+    &:visited {
+        color: darken($brandBase, 10%);
+    }
 }
 
 // Lists
 ul,
 ol {
-  list-style: none;
+    list-style: none;
 }
 strong,
-.bold {
-  font-weight: 500;
+%strong {
+    font-weight: 500;
 }
 
 // Misc Text
 small,
-.small {
-  font-size: smaller;
+%small {
+    font-size: smaller;
 }
 blockquote {
-  font-size: 1.375rem;
-  line-height: 1.5rem;
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
-  font-style: italic;
-  font-weight: lighter;
-  color: $borderColor;
+    font-size: 1.375rem;
+    line-height: 1.5rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    font-style: italic;
+    font-weight: lighter;
+    color: $borderColor;
 }
 hr {
-  display: block;
-  border: none;
-  outline: none;
-  width: 88%;
-  margin: $spacingSM auto;
-  height: 1px;
-  background: $borderColor;
+    display: block;
+    border: none;
+    outline: none;
+    width: 88%;
+    margin: $spacingSM auto;
+    height: 1px;
+    background: $borderColor;
 }
 
 //==== 4. Utility Classes ====//
@@ -213,43 +216,43 @@ hr {
 //-- A. Text Utilities --//
 // a.1 Text Positions
 .text-center {
-  text-align: center;
+    text-align: center;
 }
 .text-left {
-  text-align: left;
+    text-align: left;
 }
 .text-right {
-  text-align: right;
+    text-align: right;
 }
 
 // a.2 Text States
 .text-secondary {
-  color: $gray50;
+    color: $gray50;
 }
 .text-lead {
-  font-size: 1.375rem;
-  line-height: $spacingBase;
+    font-size: 1.375rem;
+    line-height: $spacingBase;
 }
 .text-action {
-  color: $action;
+    color: $action;
 }
 .text-danger {
-  color: $danger;
+    color: $danger;
 }
 .text-success {
-  color: $success;
+    color: $success;
 }
 .text-warning {
-  color: $warning;
+    color: $warning;
 }
 
 //-- B. List Utilities --//
 .list-clear {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 //-- C. Images --//
 img {
-  border: 0;
+    border: 0;
 }

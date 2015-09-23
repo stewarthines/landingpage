@@ -1,5 +1,34 @@
 // Variables
 //==========
+// Layouts
 $wrapperWidth: 60rem;
+$bpSM: 760px;
+$bpMD: 1023px;
+
+// Font Families
 $futuraPT: "futura-pt";
 $proximaNova: "proxima-nova";
+
+// Blocks
+%content-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: $wrapperWidth;
+    margin: 0 auto;
+}
+.block,
+%block {
+    display: flex;
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    padding: $spacingMD $spacingBase;
+    @media screen and (max-width:720px) {
+        padding: $spacingBase;
+    }
+    header:first-of-type,
+    article:first-of-type {
+        @extend %content-wrapper;
+    }
+}

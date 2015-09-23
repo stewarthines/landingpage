@@ -1,0 +1,100 @@
+.block.half {
+    flex-direction: row;
+    flex-wrap: wrap;
+    header {
+        flex: 0 0 100%;
+        order: 1;
+        @extend %content-wrapper;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-bottom: $spacingBase;
+        h1 {
+            flex: 0 0 100%;
+        }
+    }
+    article {
+        display: flex;
+        flex: 0 0 100%;
+        order: 2;
+        @extend %content-wrapper;
+        img {
+
+            //You might need to change this when you have a video
+            flex: 0 0 48%;
+            order: 1;
+            align-self: flex-start;
+            max-height: 244px;
+            margin-right: $spacingBase;
+        }
+        div {
+            flex: 0 0 48%;
+            order: 2;
+            align-self: flex-start;
+            text-align: center;
+            img {
+                display: block;
+                margin: $spacingSM auto;
+                width: 221px;
+                height: 64px;
+            }
+        }
+        h4 {
+            font-size: 20px;
+            font-weight: 500;
+        }
+        @media screen and (max-width:$bpSM) {
+            flex-direction: row;
+            flex-wrap: wrap;
+            img {
+                flex: 0 0 100%;
+                max-height: 142px;
+                margin-bottom: $spacingBase;
+            }
+            div {
+                flex: 0 0 100%;
+            }
+        }
+    }
+}
+.block {
+    flex-direction: row;
+    flex-wrap: wrap;
+    header.half {
+        flex: 0 0 100%;
+        @extend %content-wrapper;
+        div {
+            flex: 0 0 48%;
+            order: 1;
+            align-self: flex-start;
+            margin-right: $spacingBase;
+            h1 {
+                margin: 0;
+            }
+        }
+
+        // TODO: Revisit This and make it reuseable
+        img {
+            flex: 0 0 48%;
+            order: 2;
+            align-self: center;
+            max-height: 256px;
+        }
+    }
+    article.thirds {
+        flex: 0 0 100%;
+        @extend %content-wrapper;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: center;
+        h2 {
+            flex: 0 0 100%;
+        }
+        div {
+            flex: 0 0 30.8333%;
+            p {
+                text-align: left;
+            }
+        }
+    }
+}
