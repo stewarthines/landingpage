@@ -2,24 +2,23 @@
 //======================
 .block.cta {
     color: white;
-}
-.block.cta#ctaOne {
-    //img {
-    //    position: absolute;
-    //    z-index: 250;
-    //    display: block;
-    //    visibility: visible;
-    //}
-    article {
-        position: relative;
-        z-index: 150;
-        background: $brandDark;
-        color: white;
-    }
-    @media screen and (max-width:$bpSM) {
-        img {
-            display: none;
-            visibility: hidden;
+    background: $brandDark;
+    &#ctaTwo article {
+        text-align: center;
+        h2 {
+            flex: 0 0 100%;
+            order: 1;
+        }
+        p {
+            flex: 0 0 100%;
+            order: 2;
+            max-width: 45%;
+            margin: 0 auto;
+            margin-bottom: $spacingBase;
+        }
+        a {
+            flex: 0 0 100%;
+            order: 3;
         }
     }
 }

@@ -11,8 +11,9 @@
 @import "reset";
 @import "vars";
 
-// 2. Layouts
+// 2. Global Layouts
 @import "layout-header";
+@import "layout-footer";
 
 // 3. Block Files
 @import "block-hero";

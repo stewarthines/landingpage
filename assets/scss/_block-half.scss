@@ -10,6 +10,7 @@
         margin-bottom: $spacingBase;
         h1 {
             flex: 0 0 100%;
+            margin-top: 0;
         }
     }
     article {
@@ -95,6 +96,26 @@
             p {
                 text-align: left;
             }
+        }
+    }
+}
+.block#pointThree {
+    header {
+        h1 {
+            margin-bottom: 0;
+        }
+        p {
+            font-size: 1.25rem;
+            line-height: 1.875rem;
+            color: $gray50;
+        }
+    }
+    article div {
+        text-align: left;
+        margin-bottom: $spacingLG;
+        align-self: center;
+        h3 {
+            color: $brandAlt;
         }
     }
 }

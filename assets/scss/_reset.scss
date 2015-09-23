@@ -164,11 +164,8 @@ a {
     color: $brandBase;
     transition: color 250ms ease-in-out;
     &:hover {
-        color: lighten($brandBase, 30%);
+        color: lighten($brandBase, 15%);
         transition: color 250ms ease-in-out;
-    }
-    &:visited {
-        color: darken($brandBase, 10%);
     }
 }
 
