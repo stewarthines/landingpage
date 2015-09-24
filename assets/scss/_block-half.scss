@@ -37,6 +37,13 @@
                 margin: $spacingSM auto;
                 width: 221px;
                 height: 64px;
+                opacity: 0.8;
+                transition: opacity 250ms ease-in-out, transform 250ms ease-in-out;
+                &:hover {
+                    opacity: 1;
+                    transform: scale(1.05);
+                    transition: opacity 250ms ease-in-out, transform 250ms ease-in-out;
+                }
             }
         }
         h4 {

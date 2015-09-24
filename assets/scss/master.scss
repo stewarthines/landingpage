@@ -11,22 +11,27 @@
 @import "reset";
 @import "vars";
 @import "buttons";
+@import "forms";
 
 // 2. Global Layouts
 @import "layout-header";
 @import "layout-footer";
 
 // 3. Block Files
-// TODO: make this stuff more reuseable 
+// TODO: make this stuff more reuseable
 @import "block-hero";
 @import "block-cta";
 @import "block-divider";
 @import "block-half";
 @import "block-quote";
 @import "block-pricetable";
+@import "block-contact";
 
 //4. Overrides
+h1 {
+    margin-top: 0;
+}
 body {
-  font-family: $proximaNova;
-  color: $brandBase;
+    font-family: $proximaNova;
+    color: $brandBase;
 }
