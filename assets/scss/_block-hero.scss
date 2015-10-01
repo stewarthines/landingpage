@@ -7,16 +7,17 @@ section.hero {
   padding-bottom     : $spacingLG;
   background-image   : url("../img/hero_bg.png");
   background-repeat  : no-repeat;
-  background-position: bottom right;
+  background-position: bottom center;
   background-size    : cover;
   border             : 0;
   header[role="banner"] {
     position     : relative;
     width        : 100%;
     max-width    : 100%;
-    margin-bottom: $spacingLG;
+    margin-bottom: $spacingBase;
     background   : none;
     box-shadow   : none;
+    background   : linear-gradient(to bottom, rgba(0,0,0,0.25) 0%,rgba(0,0,0,0) 100%);
     a,
     li {
       color      : white;
@@ -42,11 +43,24 @@ section.hero {
     }
   }
   @media screen and (max-width:$bpSM) {
-    height        : auto;
-    padding-bottom: $spacingBase;
+    height          : auto;
+    padding-bottom  : $spacingBase;
+    background-image: url("../img/hero_mobile.png");
     article div {
       float: none;
       width: 100%;
+    }
+    header[role="banner"] {
+      .brand {
+        background: linear-gradient(to bottom, rgba(0,0,0,0.25) 0%,rgba(0,0,0,0) 100%);
+      }
+      nav ul {
+        background: rgba($brand17, 0.98);
+        li a {
+          color      : $brand83;
+          text-shadow: none;
+        }
+      }
     }
   }
 }

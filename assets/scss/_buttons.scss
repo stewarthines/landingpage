@@ -29,6 +29,10 @@ a.btn {
     transition: box-shadow 300ms ease-in-out;
     box-shadow: $inset-z1-shadow;
   }
+  @media screen and (max-width:$bpSM) {
+    width        : 100%;
+    margin-bottom: $spacingSM;
+  }
 }
 .btn.btn-brand,
 %btn-brand {
