@@ -42,11 +42,15 @@ header[role="banner"] {
 }
 nav ul li,
 nav ul li a {
+  color         : $brandBase;
   font-family   : $futuraPT;
   font-size     : $spacingXS;
   font-weight   : 800;
   text-transform: uppercase;
   vertical-align: middle;
+  a:hover {
+    color: lighten($brandBase, 30);
+  }
 }
 nav ul li a.btn {
   max-height   : 32px;

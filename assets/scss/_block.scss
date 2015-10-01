@@ -329,3 +329,12 @@ section#easeOfUse {
     margin-top: 20%;
   }
 }
+section#accountable {
+  padding              : $spacingLG 0;
+  background-image     : url("../img/account_bg.png");
+  background-repeat    : no-repeat;
+  background-position  : center;
+  background-size      : cover;
+  background-attachment: fixed;
+  border               : 0;
+}
