@@ -514,7 +514,8 @@ header[role="banner"] .brand {
 
 header[role="banner"] .brand img {
   display: inline-block;
-  max-height: 32px; }
+  max-height: 32px;
+  max-width: 156px; }
 
 header[role="banner"] ul {
   display: inline-block;
