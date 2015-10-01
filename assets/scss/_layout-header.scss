@@ -54,3 +54,66 @@ nav ul li a.btn {
   border-radius: $borderRadius;
   border       : 1px solid $borderColor;
 }
+
+//  Media Checks
+header[role="banner"] {
+  @media screen and (max-width:$bpSM) {
+    border       : none;
+    padding      : 0;
+    margin-bottom: $spacingBase;
+    background   : none;
+    box-shadow   : none;
+    nav {
+      position : relative;
+      width    : 100%;
+      max-width: 100%;
+    }
+    ul,
+    nav ul li a,
+    .brand {
+      float     : none;
+      display   : block;
+      width     : 100%;
+      text-align: center;
+    }
+    .brand {
+      position      : relative;
+      z-index       : 1200;
+      padding-bottom: $spacingSM;
+      padding-top   : $spacingSM;
+      border-bottom : 1px solid $borderColor;
+      box-shadow    : $z1-shadow;
+      background    : $brand6;
+    }
+    .divider {
+      display   : none;
+      visibility: hidden;
+    }
+    nav ul {
+      position  : absolute;
+      z-index   : 1100;
+      transform : translateY(-500px);
+      background: $brand17;
+      box-shadow: $z1-shadow;
+      opacity   : 0;
+      transition: transform 300ms ease-in-out, opacity 250ms ease-in-out;
+      &.show {
+        opacity   : 1;
+        transform : translateY(0);
+        transition: transform 300ms ease-in-out, opacity 250ms ease-in-out;
+      }
+    }
+    nav ul li a {
+      display       : block;
+      width         : 100%;
+      font-size     : 1rem;
+      letter-spacing: 0.2rem;
+      padding       : 10px 0;
+      border-bottom : 1px solid $borderColor;
+      background    : transparnt;
+      &.active {
+        background: rgba(255,255,255,0.25);
+      }
+    }
+  }
+}

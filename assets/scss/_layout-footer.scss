@@ -1,7 +1,7 @@
 // Global footer
 footer[role="footer"] {
   @extend %block;
-  padding    : $spacingLG;
+  padding    : $spacingLG 0;
   font-size  : 14px;
   font-weight: 600;
   line-height: 1;

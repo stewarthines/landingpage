@@ -53,11 +53,11 @@ blockquote {
 a {
   text-decoration: none;
   font-weight: 400;
-  color: #334667;
+  color: #0f93f5;
   transition: color 250ms ease-in-out; }
 
 a:hover {
-  color: #4c699a;
+  color: #0768b0;
   transition: color 250ms ease-in-out; }
 
 ul,
@@ -121,9 +121,11 @@ hr {
   padding: 0; }
 
 img {
+  display: inline-block;
   border: 0;
   outline: 0;
-  vertical-align: middle; }
+  vertical-align: middle;
+  max-width: 100%; }
 
 .btn,
 button,
@@ -157,6 +159,13 @@ button:active,
 a.btn:active {
   transition: box-shadow 300ms ease-in-out;
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.12), inset 0 1px 2px rgba(0, 0, 0, 0.24); }
+
+@media screen and (max-width: 760px) {
+  .btn,
+  button,
+  a.btn {
+    width: 100%;
+    margin-bottom: 1.125rem; } }
 
 .btn.btn-brand,
 fieldset button, section.cta form button {
@@ -346,12 +355,16 @@ section.cta form button {
   margin-top: 1.125rem; }
 
 @media screen and (max-width: 700px) {
+  section.half article div,
   section.half article div:first-child,
   section.half article div:last-child,
+  section.threefourths-right article div,
   section.threefourths-right article div:first-child,
   section.threefourths-right article div:last-child,
+  section.threefourths-left article div,
   section.threefourths-left article div:first-child,
   section.threefourths-left article div:last-child,
+  section.trips article div,
   section.trips article div:first-child,
   section.trips article div:last-child {
     float: none;
@@ -390,7 +403,21 @@ section#mobileReady div div {
   text-align: center; }
 
 section#mobileReady a {
-  margin-right: 1.75rem; }
+  margin-right: 1.75rem;
+  opacity: 0.7;
+  transition: -webkit-transform 200ms ease-in-out, opacity 200ms ease-in-out;
+  transition: transform 200ms ease-in-out, opacity 200ms ease-in-out; }
+
+section#mobileReady a:hover {
+  opacity: 1;
+  transition: -webkit-transform 200ms ease-in-out, opacity 200ms ease-in-out;
+  transition: transform 200ms ease-in-out, opacity 200ms ease-in-out; }
+
+@media screen and (max-width: 760px) {
+  section#mobileReady a {
+    display: inline-block;
+    margin-bottom: 1.125rem;
+    margin-right: 0; } }
 
 section#locationUpdate {
   background-image: url("../img/locationBG.png");
@@ -438,7 +465,7 @@ section.hero {
   padding-bottom: 5.25rem;
   background-image: url("../img/hero_bg.png");
   background-repeat: no-repeat;
-  background-position: bottom right;
+  background-position: bottom center;
   background-size: cover;
   border: 0; }
 
@@ -446,9 +473,10 @@ section.hero header[role="banner"] {
   position: relative;
   width: 100%;
   max-width: 100%;
-  margin-bottom: 5.25rem;
+  margin-bottom: 1.75rem;
   background: none;
-  box-shadow: none; }
+  box-shadow: none;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.25) 0%, transparent 100%); }
 
 section.hero header[role="banner"] a,
 section.hero header[role="banner"] li {
@@ -473,10 +501,18 @@ section.hero article div div {
 @media screen and (max-width: 760px) {
   section.hero {
     height: auto;
-    padding-bottom: 1.75rem; }
+    padding-bottom: 1.75rem;
+    background-image: url("../img/hero_mobile.png"); }
   section.hero article div {
     float: none;
-    width: 100%; } }
+    width: 100%; }
+  section.hero header[role="banner"] .brand {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.25) 0%, transparent 100%); }
+  section.hero header[role="banner"] nav ul {
+    background: rgba(218, 218, 222, 0.98); }
+  section.hero header[role="banner"] nav ul li a {
+    color: #4a4b5c;
+    text-shadow: none; } }
 
 section.contact header {
   text-align: center; }
@@ -491,6 +527,19 @@ section.contact iframe {
 
 section.contact li {
   margin-bottom: 1.125rem; }
+
+@media screen and (max-width: 760px) {
+  section.contact div {
+    float: none;
+    display: block;
+    width: 100%; }
+  section.contact .left h3,
+  section.contact iframe,
+  section.contact .right {
+    display: none;
+    visibility: hidden; }
+  section.contact li {
+    text-align: center; } }
 
 header[role="banner"] {
   position: fixed;
@@ -542,8 +591,66 @@ nav ul li a.btn {
   border-radius: 4px;
   border: 1px solid #c2c3c9; }
 
+@media screen and (max-width: 760px) {
+  header[role="banner"] {
+    border: none;
+    padding: 0;
+    margin-bottom: 1.75rem;
+    background: none;
+    box-shadow: none; }
+  header[role="banner"] nav {
+    position: relative;
+    width: 100%;
+    max-width: 100%; }
+  header[role="banner"] ul,
+  header[role="banner"] nav ul li a,
+  header[role="banner"] .brand {
+    float: none;
+    display: block;
+    width: 100%;
+    text-align: center; }
+  header[role="banner"] .brand {
+    position: relative;
+    z-index: 1200;
+    padding-bottom: 1.125rem;
+    padding-top: 1.125rem;
+    border-bottom: 1px solid #c2c3c9;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    background: #f2f2f4; }
+  header[role="banner"] .divider {
+    display: none;
+    visibility: hidden; }
+  header[role="banner"] nav ul {
+    position: absolute;
+    z-index: 1100;
+    -webkit-transform: translateY(-500px);
+        -ms-transform: translateY(-500px);
+            transform: translateY(-500px);
+    background: #dadade;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    opacity: 0;
+    transition: -webkit-transform 300ms ease-in-out, opacity 250ms ease-in-out;
+    transition: transform 300ms ease-in-out, opacity 250ms ease-in-out; }
+  header[role="banner"] nav ul.show {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+            transform: translateY(0);
+    transition: -webkit-transform 300ms ease-in-out, opacity 250ms ease-in-out;
+    transition: transform 300ms ease-in-out, opacity 250ms ease-in-out; }
+  header[role="banner"] nav ul li a {
+    display: block;
+    width: 100%;
+    font-size: 1rem;
+    letter-spacing: 0.2rem;
+    padding: 10px 0;
+    border-bottom: 1px solid #c2c3c9;
+    background: transparnt; }
+  header[role="banner"] nav ul li a.active {
+    background: rgba(255, 255, 255, 0.25); } }
+
 footer[role="footer"] {
-  padding: 5.25rem;
+  padding: 5.25rem 0;
   font-size: 14px;
   font-weight: 600;
   line-height: 1;

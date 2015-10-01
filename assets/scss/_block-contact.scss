@@ -18,4 +18,20 @@ section.contact {
   li {
     margin-bottom: $spacingSM;
   }
+  @media screen and (max-width:$bpSM) {
+    div {
+      float  : none;
+      display: block;
+      width  : 100%;
+    }
+    .left h3,
+    iframe,
+    .right {
+      display   : none;
+      visibility: hidden;
+    }
+    li {
+      text-align: center;
+    }
+  }
 }

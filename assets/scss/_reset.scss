@@ -155,10 +155,10 @@ blockquote {
 a {
   text-decoration: none;
   font-weight    : 400;
-  color          : $brandBase;
+  color          : $action;
   transition     : color 250ms ease-in-out;
   &:hover {
-    color     : lighten($brandBase, 15%);
+    color     : darken($action, 15%);
     transition: color 250ms ease-in-out;
   }
 }
@@ -245,7 +245,9 @@ hr {
 
 //-- C. Images --//
 img {
+  display       : inline-block;
   border        : 0;
   outline       : 0;
   vertical-align: middle;
+  max-width     : 100%;
 }
