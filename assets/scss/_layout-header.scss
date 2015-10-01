@@ -2,51 +2,53 @@
 //==============
 // Stewart Hines September 2015
 header[role="banner"] {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    width: 100%;
-    padding: $spacingMD 0;
-    div {
-        flex: 1;
-        display: flex;
-        flex-direction: row;
-        align-content: center;
-        align-self: center;
-        justify-content: center;
-        max-width: $wrapperWidth;
-        margin: 0 auto;
-        a {
-            flex: 1;
-            align-self: center;
-            order: 1;
-            img {
-                display: block;
-                width: 233px;
-            }
-        }
-        nav {
-            flex: 1;
-            align-self: center;
-            order: 2;
-            text-align: right;
-        }
+  position     : fixed;
+  top          : 0;
+  left         : 0;
+  right        : 0;
+  display      : block;
+  width        : 100%;
+  padding      : $spacingSM 0;
+  background   : $brand6;
+  border-bottom: 1px solid $borderColor;
+  box-shadow   : $z1-shadow;
+  nav {
+    @extend %wrapper;
+  }
+  .brand {
+    display       : inline-block;
+    float         : left;
+    width         : 23%;
+    margin-right  : 2%;
+    vertical-align: middle;
+    img {
+      display   : inline-block;
+      max-height: 32px;
     }
-    @media screen and (max-width:720px) {
-        width: 100%;
-        border-bottom: 1px solid $borderColor;
-        padding: $spacingBase;
-        a {
-            img {
-                width: 155px;
-                max-width: 155px;
-            }
-        }
-        nav {
-            display: none;
-        }
+  }
+  ul {
+    display   : inline-block;
+    float     : left;
+    width     : 75%;
+    margin    : 0;
+    padding   : 0;
+    text-align: right;
+    li {
+      display: inline;
     }
+  }
 }
-header[role="banner"] nav a {
-    font-family: $futuraPT;
+nav ul li,
+nav ul li a {
+  font-family   : $futuraPT;
+  font-size     : $spacingXS;
+  font-weight   : 800;
+  text-transform: uppercase;
+  vertical-align: middle;
+}
+nav ul li a.btn {
+  max-height   : 32px;
+  padding      : $spacingXS;
+  border-radius: $borderRadius;
+  border       : 1px solid $borderColor;
 }

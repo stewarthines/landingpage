@@ -3,8 +3,8 @@
 // Stewart Hines | September 2015
 //---- Contents ----//
 // 1. Basics
-// 2. Layouts
-// 3. Blocks
+// 2. Blocks
+// 3. Layouts
 // 4. Overrides -- TODO: Get rid of this in the end
 //------------------//
 // 1. Basics
@@ -13,25 +13,20 @@
 @import "buttons";
 @import "forms";
 
-// 2. Global Layouts
+// 2. Block Files
+// TODO: make this stuff more reuseable
+@import "block";
+@import "block-hero.scss";
+
+// 3. Global Layouts
 @import "layout-header";
 @import "layout-footer";
 
-// 3. Block Files
-// TODO: make this stuff more reuseable
-@import "block-hero";
-@import "block-cta";
-@import "block-divider";
-@import "block-half";
-@import "block-quote";
-@import "block-pricetable";
-@import "block-contact";
-
 //4. Overrides
 h1 {
-    margin-top: 0;
+  margin-top: 0;
 }
 body {
-    font-family: $proximaNova;
-    color: $brandBase;
+  font-family: $proximaNova;
+  color      : $brandBase;
 }

@@ -1,36 +1,43 @@
 .block.contact {
-    flex-wrap: wrap;
-    header,
-    article {
-        flex: 0 0 100%;
-        justify-content: center;
-        h1 {
-            color: $brandAlt;
-        }
+  flex-wrap: wrap;
+  header,
+  article {
+    flex           : 0 0 100%;
+    justify-content: center;
+    h1 {
+      color: $brandAlt;
     }
-    form {
-        width: 75%;
+  }
+  form {
+    width: 75%;
+  }
+  fieldset {
+    font-size    : 100%;
+    header {
+      font-size    : $spacingBase;
+      color        : $brandBase;
+      font-weight  : 300;
+      margin-bottom: $spacingBase;
     }
-    fieldset {
-        header {
-            font-size: $spacingBase;
-            color: $brandBase;
-            font-weight: 300;
-            margin-bottom: $spacingBase;
-        }
-        flex: 0 0 50%;
-        display: block;
-        margin: 0 auto;
-        padding: $spacingBase;
-        background: $gray6;
-        border-radius: $borderRadius;
-        box-shadow: $z1-shadow;
-    }
-    .form-row {
-        display: flex;
-    }
-    .form-group {
-        flex: 1;
-        padding: 0 $spacingXS;
-    }
+    flex         : 0 0 50%;
+    display      : block;
+    margin       : 0 auto;
+    padding      : $spacingBase;
+    background   : $gray6;
+    border-radius: $borderRadius;
+    box-shadow   : $z1-shadow;
+  }
+  .form-row {
+    display: flex;
+  }
+  .form-group {
+    flex   : 1;
+    padding: 0 $spacingXS;
+  }
+  footer {
+    flex      : 0 0 100%;
+    margin-top: $spacingMD;
+    text-align: center;
+    color     : $brandAlt;
+  }
 }

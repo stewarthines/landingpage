@@ -1,17 +1,52 @@
 // Hero Block
 //===========
 // Stewart Hines | September 2015
-.block.hero {
-  padding: $spacingLG;
-  article {
-    max-width: $wrapperWidth;
-    margin: 0 auto;
-    text-align: center;
-    justify-content: center;
+section.hero {
+  height             : 600px;
+  padding-top        : 0;
+  padding-bottom     : $spacingLG;
+  background-image   : url("../img/hero_bg.png");
+  background-repeat  : no-repeat;
+  background-position: bottom right;
+  background-size    : cover;
+  border             : 0;
+  header[role="banner"] {
+    position     : relative;
+    width        : 100%;
+    max-width    : 100%;
+    margin-bottom: $spacingLG;
+    background   : none;
+    box-shadow   : none;
+    a,
+    li {
+      color      : white;
+      text-shadow: $z1-shadow;
+    }
+    a.btn {
+      
+    }
   }
-  h1 {
-    color: $brandAlt;
-    font-family: $futuraPT;
-    margin-bottom: $spacingBase;
+  article div {
+    float      : right;
+    width      : 64.6667%;
+    color      : white;
+    text-align : center;
+    text-shadow: $z1-shadow;
+    h1 {
+      font-family: $futuraPT;
+      color      : white;
+    }
+    div {
+      width     : 100%;
+      text-align: center;
+    }
+  }
+  @media screen and (max-width:$bpSM) {
+    height        : auto;
+    padding-bottom: $spacingBase;
+    article div {
+      float: none;
+      width: 100%;
+    }
   }
 }
