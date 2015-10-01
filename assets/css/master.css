@@ -1,4 +1,4 @@
-section:after, section article:after,
+section:after, section.contact:after, section article:after,
 section header:after,
 section footer:after, header[role="banner"] nav:after {
   content: "";
@@ -159,13 +159,14 @@ a.btn:active {
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.12), inset 0 1px 2px rgba(0, 0, 0, 0.24); }
 
 .btn.btn-brand,
-section.cta form button {
+fieldset button, section.cta form button {
   color: white;
   letter-spacing: 0.2rem;
   background: #5a6984;
   border-color: transparent; }
 
-input {
+input,
+textarea {
   display: inline-block;
   width: 100%;
   padding: 0.625rem 0;
@@ -178,12 +179,38 @@ input {
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.12), inset 0 1px 2px rgba(0, 0, 0, 0.24);
   transition: border-color 250ms ease-in-out, box-shadow 250ms ease-in-out; }
 
-input:focus {
-  border-color: #9c9c9c;
-  box-shadow: none;
+input:focus,
+textarea:focus {
+  border-color: #0f93f5;
+  box-shadow: 0 0 8px rgba(15, 147, 245, 0.45), 0 0 8px rgba(15, 147, 245, 0.25);
   transition: border-color 250ms ease-in-out, box-shadow 250ms ease-in-out; }
 
-section {
+label {
+  display: block;
+  width: 100%;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: auto;
+  text-align: left !important; }
+
+.form-group {
+  display: block;
+  width: 100% !important;
+  margin-bottom: 1.125rem; }
+
+fieldset {
+  display: block;
+  width: 100%;
+  padding: 1.75rem;
+  border-radius: 4px;
+  border: 1px solid #c2c3c9;
+  background: #f0f0f0;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23); }
+
+fieldset footer {
+  text-align: center; }
+
+section, section.contact {
   position: relative;
   z-index: 10;
   display: block;
@@ -191,7 +218,7 @@ section {
   padding: 3.5rem 0; }
 
 @media screen and (max-width: 700px) {
-  section {
+  section, section.contact {
     padding: 1.75rem 0; } }
 
 section article,
@@ -243,13 +270,15 @@ section header {
 section footer {
   margin-top: 1.75rem; }
 
-section.half div {
+section.half div,
+section.contact div {
   display: inline-block;
   width: 49%;
   margin-right: 2%;
   float: left; }
 
-section.half div:last-child {
+section.half div:last-child,
+section.contact div:last-child {
   margin-right: 0; }
 
 section.center header,
@@ -447,6 +476,20 @@ section.hero article div div {
   section.hero article div {
     float: none;
     width: 100%; } }
+
+section.contact header {
+  text-align: center; }
+
+section.contact div.left {
+  margin-top: 1.75rem; }
+
+section.contact iframe {
+  border: 1px solid #c2c3c9;
+  border-radius: 4px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23); }
+
+section.contact li {
+  margin-bottom: 1.125rem; }
 
 header[role="banner"] {
   position: fixed;
