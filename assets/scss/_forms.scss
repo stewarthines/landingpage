@@ -1,6 +1,8 @@
 // Forms
 //======
-input {
+// 1. Basic Inputs
+input,
+textarea {
   display      : inline-block;
   width        : 100%;
   padding      : 0.625rem 0;
@@ -13,8 +15,40 @@ input {
   box-shadow   : $inset-z1-shadow;
   transition   : border-color 250ms ease-in-out, box-shadow 250ms ease-in-out;
   &:focus {
-    border-color: $gray39;
-    box-shadow  : none;
+    border-color: $action;
+    box-shadow  : 0 0 8px rgba($action, .45), 0 0 8px rgba($action, .25);
     transition  : border-color 250ms ease-in-out, box-shadow 250ms ease-in-out;
+  }
+}
+label {
+  display    : block;
+  width      : 100%;
+  font-size  : 12px;
+  font-weight: 600;
+  line-height: auto;
+  text-align : left !important;
+}
+
+// 2. Form Groups
+.form-group {
+  display      : block;
+  width        : 100% !important;
+  margin-bottom: $spacingSM;
+}
+
+// 3. Fieldsets
+fieldset {
+  display      : block;
+  width        : 100%;
+  padding      : $spacingBase;
+  border-radius: $borderRadius;
+  border       : 1px solid $borderColor;
+  background   : $gray6;
+  box-shadow   : $z2-shadow;
+  footer {
+    text-align: center;
+  }
+  button {
+    @extend %btn-brand;
   }
 }

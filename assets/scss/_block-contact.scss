@@ -1,43 +1,21 @@
-.block.contact {
-  flex-wrap: wrap;
-  header,
-  article {
-    flex           : 0 0 100%;
-    justify-content: center;
-    h1 {
-      color: $brandAlt;
-    }
-  }
-  form {
-    width: 75%;
-  }
-  fieldset {
-    font-size    : 100%;
-    header {
-      font-size    : $spacingBase;
-      color        : $brandBase;
-      font-weight  : 300;
-      margin-bottom: $spacingBase;
-    }
-    flex         : 0 0 50%;
-    display      : block;
-    margin       : 0 auto;
-    padding      : $spacingBase;
-    background   : $gray6;
-    border-radius: $borderRadius;
-    box-shadow   : $z1-shadow;
-  }
-  .form-row {
-    display: flex;
-  }
-  .form-group {
-    flex   : 1;
-    padding: 0 $spacingXS;
-  }
-  footer {
-    flex      : 0 0 100%;
-    margin-top: $spacingMD;
+// Contact Block
+// =============
+// section.contact | section#contact
+section.contact {
+  @extend %block;
+  @extend %blockHalf;
+  header {
     text-align: center;
-    color     : $brandAlt;
+  }
+  div.left {
+    margin-top: $spacingBase;
+  }
+  iframe {
+    border       : 1px solid $borderColor;
+    border-radius: $borderRadius;
+    box-shadow   : $z2-shadow;
+  }
+  li {
+    margin-bottom: $spacingSM;
   }
 }
