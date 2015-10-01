@@ -1,13 +1,10 @@
 // Global footer
 footer[role="footer"] {
-    padding: $spacingLG;
-    text-align: center;
-    background: #bfbfbf;
-    div {
-        @extend %content-wrapper;
-    }
-    nav,
-    p {
-        flex: 0 0 100%;
-    }
+  @extend %block;
+  padding    : $spacingLG;
+  font-size  : 14px;
+  font-weight: 600;
+  line-height: 1;
+  text-align : center;
+  background : $brand17;
 }

@@ -1,4 +1,4 @@
-section:after, section.contact:after, section article:after,
+section:after, section.contact:after, footer[role="footer"]:after, section article:after,
 section header:after,
 section footer:after, header[role="banner"] nav:after {
   content: "";
@@ -210,7 +210,7 @@ fieldset {
 fieldset footer {
   text-align: center; }
 
-section, section.contact {
+section, section.contact, footer[role="footer"] {
   position: relative;
   z-index: 10;
   display: block;
@@ -218,7 +218,7 @@ section, section.contact {
   padding: 3.5rem 0; }
 
 @media screen and (max-width: 700px) {
-  section, section.contact {
+  section, section.contact, footer[role="footer"] {
     padding: 1.75rem 0; } }
 
 section article,
@@ -541,14 +541,11 @@ nav ul li a.btn {
 
 footer[role="footer"] {
   padding: 5.25rem;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1;
   text-align: center;
-  background: #bfbfbf; }
-
-footer[role="footer"] nav,
-footer[role="footer"] p {
-  -webkit-flex: 0 0 100%;
-      -ms-flex: 0 0 100%;
-          flex: 0 0 100%; }
+  background: #dadade; }
 
 h1 {
   margin-top: 0; }
