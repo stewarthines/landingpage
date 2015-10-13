@@ -1,0 +1,35 @@
+// Master SCSS Import File
+//========================
+// Stewart Hines | September 2015
+//---- Contents ----//
+// 1. Basics
+// 2. Blocks
+// 3. Layouts
+// 4. Overrides -- TODO: Get rid of this in the end
+//------------------//
+.landingpage {
+
+    // 1. Basics
+    @import "reset";
+    @import "vars";
+    @import "buttons";
+    @import "forms";
+    // 2. Block Files
+    @import "block";
+    @import "block-hero.scss";
+    @import "block-contact.scss";
+    // 3. Global Layouts
+    @import "layout-header";
+    @import "layout-footer";
+    @import "layout-content";
+
+    //4. Overrides
+    font-family: $proximaNova;
+    color:       $brandBase;
+    font-size:   $spacingSM;
+    line-height: $spacingBase;
+    h1 {
+        margin-top: 0;
+    }
+
+}

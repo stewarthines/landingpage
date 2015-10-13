@@ -1,0 +1,271 @@
+// Basic Global Reset
+// ==================
+// Basic units come from www.gridlover.net/app/
+// size: 16 | line height 1.5 | Scale Factor: 1.4
+// Stewart Hines 2015 | Based On Tuts+
+// Built for SCSS
+// ==================
+// Contents
+// ==================
+// 1. Basic Variables & Mixins
+//    a. Spacing
+//    b. Colors
+//      b.1 Shades of Gray
+//      b.2 State Colors
+//      b.3 Brand Colors
+//    c. Positioning Extensions
+//    d. Typography Variables
+// 2. Main Elements
+// 3. Typography
+//    a. Headings
+//    b. Paragraphs
+//    c. Links
+//    d. Misc Text
+// 4. Utility Classes
+//    a. Text Utilities
+//      a.1 Text Positions
+//      a.2 Text States
+//    b. List Utilities
+//    c. Images
+//    d. Positioning
+//==== 1. Basic Variables & Mixins ====//
+//-- A. Spacing --//
+//14px - Base / 2
+$spacingXS: 0.75rem;
+
+//18px - Font Size
+$spacingSM: 1.125rem;
+
+//28px - Line Height
+$spacingBase: 1.75rem;
+
+//56px - Base * 2
+$spacingMD: 3.5rem;
+
+//84px - Base * 3
+$spacingLG: 5.25rem;
+
+//112px - Base * 4
+$spacingXL: 7rem;
+
+//-- B. Colors --//
+// b.1 Shades of Gray
+$gray94: #0f0f0f;
+$gray83: #2b2b2b;
+$gray72: #474747;
+$gray61: #636363;
+$gray50: #7f7f7f;
+$gray39: #9c9c9c;
+$gray28: #b8b8b8;
+$gray17: #d4d4d4;
+$gray6: #f0f0f0;
+
+// b.2 State Colors
+$action: #0f93f5;
+$danger: #f44336;
+$success: #46af4a;
+$warning: #ff9800;
+
+// b.3 Brand Colors
+$brandBase: #334667;
+$brandDark: #25263b;
+$brandAlt: #a60311;
+$brandAltDark: #73020c;
+
+//-- C. Positioning Extensions --//
+%clearfix {
+
+    // Thanks Treehouse!
+    &:after {
+        content: "";
+        display: table;
+        clear:   both;
+    }
+}
+
+%pull-right {
+    display: inline-block;
+    float:   right;
+}
+
+%pull-left {
+    display: inline-block;
+    float:   left;
+}
+
+// -- D. Typography Variables --//
+$fontFamily: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$fontColor: $gray83;
+$borderColor: $gray17;
+$borderRadius: 4px;
+
+//==== 2. Main Elements ====//
+* {
+    margin:             0;
+    padding:            0;
+    border:             0;
+    outline:            none;
+    -moz-box-sizing:    border-box;
+    -webkit-box-sizing: border-box;
+    -o-box-sizing:      border-box;
+    -ms-box-sizing:     border-box;
+    box-sizing:         border-box;
+}
+
+html,
+body {
+    height:         100%;
+    box-sizing:     border-box;
+    font-family:    $fontFamily;
+    color:          $fontColor;
+    line-height:    $spacingBase;
+    font-size:      $spacingSM;
+    font-weight:    300;
+    letter-spacing: 0.09em;
+}
+
+//==== 3. Typography ====//
+// Headings
+h1,
+.h1 {
+    font-size:   2.75rem; //44px
+    line-height: $spacingMD; //48px
+}
+
+h2,
+.h2 {
+    font-size:   1.9375rem; //31px
+    line-height: $spacingMD;
+}
+
+h3,
+.h3 {
+    font-size:   1.25rem; //22px
+    line-height: $spacingBase;
+    font-weight: 500;
+}
+
+// Paragraphs
+p,
+ul,
+ol,
+pre,
+table,
+blockquote {
+    font-size:     $spacingSM;
+    font-weight:   300;
+    line-height:   $spacingBase;
+    margin-top:    $spacingBase;
+    margin-bottom: $spacingBase;
+}
+
+// Links
+a {
+    text-decoration: none;
+    font-weight:     400;
+    color:           $action;
+    transition:      color 250ms ease-in-out;
+    &:hover {
+        color:      darken($action, 15%);
+        transition: color 250ms ease-in-out;
+    }
+}
+
+// Lists
+ul,
+ol {
+    list-style: none;
+}
+
+strong,
+%strong {
+    font-weight: 500;
+}
+
+// Misc Text
+small,
+%small {
+    font-size: smaller;
+}
+
+blockquote {
+    font-size:     1.375rem;
+    line-height:   1.5rem;
+    margin-top:    1.5rem;
+    margin-bottom: 1.5rem;
+    font-style:    italic;
+    font-weight:   lighter;
+    color:         $borderColor;
+}
+
+hr {
+    display:    block;
+    border:     none;
+    outline:    none;
+    width:      88%;
+    margin:     $spacingSM auto;
+    height:     1px;
+    background: $borderColor;
+}
+
+//==== 4. Utility Classes ====//
+// A. Text Utilities
+//  a.1 Text Positions
+//  a.2 Text States
+// B. List Utilities
+// C. Images
+// C. Positions
+//-- A. Text Utilities --//
+// a.1 Text Positions
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+// a.2 Text States
+.text-secondary {
+    color: $gray50;
+}
+
+.text-lead {
+    font-size:   1.375rem;
+    line-height: $spacingBase;
+}
+
+.text-action {
+    color: $action;
+}
+
+.text-danger {
+    color: $danger;
+}
+
+.text-success {
+    color: $success;
+}
+
+.text-warning {
+    color: $warning;
+}
+
+//-- B. List Utilities --//
+.list-clear {
+    margin:  0;
+    padding: 0;
+}
+
+//-- C. Images --//
+img {
+    display:        inline-block;
+    border:         0;
+    outline:        0;
+    vertical-align: middle;
+    max-width:      100%;
+}

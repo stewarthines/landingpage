@@ -1,0 +1,81 @@
+// Price Table
+//============
+.block.price-table {
+  header,
+  article,
+  footer {
+    @extend %content-wrapper;
+    flex: 100%;
+  }
+  header {
+    justify-content: center;
+    h1 {
+      flex: 100%;
+      text-align: center;
+      color: $brandAlt;
+      font-family: $futuraPT;
+    }
+    p {
+      flex: 0 0 75%;
+      align-self: center;
+    }
+  }
+  article div {
+    flex: 0 0 50%;
+    padding: 0 $spacingLG;
+    footer {
+      display: block;
+      width: 100%;
+      font-size: $spacingXS;
+      text-align: center;
+    }
+  }
+  article table {
+    width: 100%;
+    outline: none;
+    border-collapse: collapse;
+
+    // border: 1px solid $borderColor;
+    border-radius: $borderRadius;
+    box-shadow: $z2-shadow;
+    tr th,
+    tr td {
+      padding: $spacingBase $spacingSM;
+      text-align: center;
+      font-size: 1.125rem;
+      font-weight: 400;
+      text-transform: capitalize;
+    }
+    tr {
+      td {
+        border-bottom: 1px solid $borderColor;
+      }
+      &:last-child {
+        td {
+          border-bottom: none;
+        }
+      }
+    }
+    thead tr th {
+      font-size: 31px;
+      font-weight: 300;
+    }
+    tr.price {
+      background: $brandBase;
+      color: white;
+      height: 83px;
+      td {
+        font-weight: 800;
+        font-size: $spacingMD;
+        text-transform: uppercase;
+        small {
+          font-size: $spacingXS;
+        }
+      }
+    }
+  }
+  footer {
+    text-align: center;
+    justify-content: center;
+  }
+}

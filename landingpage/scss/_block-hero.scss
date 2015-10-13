@@ -1,0 +1,72 @@
+// Hero Block
+//===========
+// Stewart Hines | September 2015
+section.hero {
+    height:              600px;
+    padding-top:         0;
+    padding-bottom:      $spacingLG;
+    background-image:    url("../img/hero_bg-min.png");
+    background-repeat:   no-repeat;
+    background-position: bottom center;
+    background-size:     cover;
+    border:              0;
+    header[role="banner"] {
+        position:      relative;
+        width:         100%;
+        max-width:     100%;
+        margin-bottom: $spacingBase;
+        box-shadow:    none;
+        background:    linear-gradient(to bottom, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0) 100%);
+        a,
+        li {
+            color:       white;
+            text-shadow: $z1-shadow;
+        }
+        a.btn {
+
+        }
+    }
+    article div {
+        float:       right;
+        width:       64.6667%;
+        color:       white;
+        text-align:  center;
+        text-shadow: $z1-shadow;
+        h1 {
+            font-family: $futuraPT;
+            color:       white;
+            font-size:   $spacingMD;
+            line-height: 1.5;
+            margin-top:  $spacingXL;
+        }
+        div {
+            width:      100%;
+            text-align: center;
+        }
+    }
+    @media screen and (max-width: $bpSM) {
+        height:           auto;
+        padding-bottom:   $spacingBase;
+        background-image: url("../img/hero_mobile.jpg");
+        article div {
+            float: none;
+            width: 100%;
+            h1 {
+                margin-top: 0;
+                font-size:$spacingBase;
+            }
+        }
+        header[role="banner"] {
+            .brand {
+                background: linear-gradient(to bottom, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0) 100%);
+            }
+            nav ul {
+                background: rgba($brand17, 0.98);
+                li a {
+                    color:       $brand83;
+                    text-shadow: none;
+                }
+            }
+        }
+    }
+}

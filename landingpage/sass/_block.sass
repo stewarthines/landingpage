@@ -1,0 +1,282 @@
+// Blocks
+//============
+// Stewart Hines September - October 2015
+// This Covers Generic Blocks
+// = = = = Contents: = = = =//
+// 1. Block Extends
+// 2. Basic Block Structure
+// 3. Block Types
+// 4. Block Styles
+// 5. Specific Overrides & Styles
+// = = = = = = = = = = = = =//
+//- - 1. Block Extends - -//
+%block
+  position: relative
+  z-index: 10
+  display: block
+  width: 100%
+  padding: $spacingMD 0
+  @extend %clearfix
+  @media screen and (max-width: 700px)
+    padding: $spacingBase 0
+
+%wrapper
+  display: block
+  width: 90%
+  max-width: $wrapperWidth
+  margin: 0 auto
+  padding: 0
+  @extend %clearfix
+
+%cell
+  display: inline-block
+  float: left
+
+// - - 2. Basic Structure - - //
+section
+  // Defaults
+  @extend %block
+  border-bottom: 1px solid $borderColor
+  // Alterations
+  // Padding Locations
+  &.no-bottom
+    padding-bottom: 0
+  &.no-top
+    padding-top: 0
+  &.no-padding
+    padding: 0
+  // Padding Sizes
+  &.spacingSM
+    padding: $spacingSM 0
+  &.spacingBase
+    padding: $spacingBase 0
+  &.spacingMD
+    padding: $spacingMD 0
+  &.spacingLG
+    padding: $spacingLG 0
+  // Borders
+  &.border-bottom
+    border-bottom: 1px solid $borderColor
+  &.no-border
+    border: none
+  // Elements
+  article,
+  header,
+  footer
+    @extend %wrapper
+  // Give Margin to the header and footer so that the article can be on it's own.
+  header
+    margin-bottom: $spacingBase
+  footer
+    margin-top: $spacingBase
+
+// == 3. Block Types == //
+// These block files allow for a header, article, footer structure.
+// A. Half Blocks
+// B. Centered Stacked
+// C. Three Fourths Left
+// D. Three Fourths Right
+// F. Media Checks
+// =======================//
+// A. Half
+
+section.half,
+%blockHalf
+  div
+    display: inline-block
+    width: 49%
+    margin-right: 2%
+    float: left
+    &:last-child
+      margin-right: 0
+
+//  B. Centered Blocks
+// This does not need nested divs.
+
+section.center,
+%blockCenter
+  header,
+  footer
+    text-align: center
+  header
+    margin-bottom: $spacingBase
+  footer
+    margin-top: $spacingBase
+  article
+    text-align: center
+
+// C. Three Fourths Left
+
+section.threefourths-left,
+%blockThreeFourthsLeft
+  article
+    div
+      display: inline-block
+      float: left
+    div:first-child
+      width: 64.6667%
+      margin-right: 2%
+    div:last-child
+      width: 33.3333%
+
+// D. Three Fourths Right
+
+section.threefourths-right,
+%blockThreeFourthsRight
+  article
+    div
+      display: inline-block
+      float: left
+    div:first-child
+      width: 33.3333%
+      margin-right: 2%
+    div:last-child
+      width: 64.6667%
+
+// E. Trips
+
+section.trips,
+%blockTrips
+  article
+    div
+      @extend %cell
+      width: 31.5%
+      margin-right: 2.5%
+      &:last-child
+        margin-right: 0
+
+// Call To Action
+
+section.cta,
+%blockCTA
+  background: $brand61
+  padding: $spacingSM
+  text-align: center
+  border: none
+  article
+    width: 100%
+    max-width: 100%
+    border: 4px solid $brand61x2
+    padding: $spacingSM
+  div
+    width: 100%
+    max-width: 400px
+    margin: 0 auto
+    .btn
+      @extend %btn-brand
+      width: 100%
+  @media screen and (max-width: $bpSM)
+    div,
+    .btn
+      margin-bottom: 0 !important
+
+// F. Media Checks
+@media screen and (max-width: 700px)
+  section.half,
+  section.threefourths-right,
+  section.threefourths-left,
+  section.trips
+    article div,
+    article div:first-child,
+    article div:last-child
+      float: none
+      margin-right: 0
+      width: 100%
+  article div:first-child,
+  section.trips article div:nth-child(even)
+    margin-bottom: $spacingBase
+  .hidden-sm
+    display: none !important
+    visibility: hidden
+
+// - - 4. Block Styles - - //
+section
+  h1,
+  h2,
+  h3
+    font-family: $futuraPT
+    color: $brandAlt
+  h1
+    @extend .h2
+
+.white-text
+  *
+    color: white
+    text-shadow: $z1-shadow
+
+.bg-gray
+  background: $gray6
+
+// 5. Specific Overrides & Styles
+section#overview
+  padding: $spacingBase 0
+  text-align: center
+  background: $gray6
+  img
+    max-height: 48px
+    margin-bottom: $spacingSM
+
+section#mobileReady
+  h1
+    margin-top: $spacingLG
+  img
+    vertical-align: bottom
+  div div
+    width: 100%
+    text-align: center
+  a
+    margin-right: $spacingBase
+    opacity: 0.7
+    transition: transform 200ms ease-in-out, opacity 200ms ease-in-out
+    &:hover
+      opacity: 1
+      transition: transform 200ms ease-in-out, opacity 200ms ease-in-out
+  @media screen and (max-width: $bpSM)
+    a
+      display: inline-block
+      margin-bottom: $spacingSM
+      margin-right: 0
+    h1
+      margin-top: 0
+    img
+      display: none
+      visibility: hidden
+      opacity: 0
+
+section#management
+  h1
+    display: block
+    padding-top: $spacingBase
+  @media screen and (max-width: $bpSM)
+    img
+      display: none
+      visibility: hidden
+
+section#select
+  padding: $spacingLG 0
+  background: $brandBase
+  border: 0
+  @extend .white-text
+  header
+    text-align: center
+  div
+    margin: 0 auto
+    width: 75%
+
+section#notify
+  padding: $spacingLG 0
+  background-image: url("../img/notifybg.png")
+  background-repeat: no-repeat
+  background-position: center
+  background-size: cover
+  border: 0
+  @extend .white-text
+
+section#analyze
+  img
+    padding-top: $spacingMD
+
+video
+  display: block
+  width: 100%
+  max-width: 100%

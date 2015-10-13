@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="150px" height="151px" viewBox="0 0 150 151" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.3 (12072) - http://www.bohemiancoding.com/sketch -->
+    <title>Chart</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-3" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="180---iPhone-6-Plus" sketch:type="MSArtboardGroup" transform="translate(-15.000000, -15.000000)">
+            <g id="Chart" sketch:type="MSLayerGroup" transform="translate(15.000000, 15.000000)">
+                <path d="M149.625892,76.3741084 L73.6258916,76.3741084 L73.6258916,0.374108384 C115.599533,0.374108384 149.625892,34.4004674 149.625892,76.3741084 Z" id="Rectangle-3" fill="#A60311" sketch:type="MSShapeGroup"></path>
+                <path d="M68,15.7482168 L68,83 L0.748216769,83 C0.748216769,45.8578657 30.8578657,15.7482168 68,15.7482168 Z" id="Rectangle-3-Copy-2" fill="#4A4B5C" sketch:type="MSShapeGroup"></path>
+                <path d="M135.251783,83 L68,83 L68,150.251783 C105.142134,150.251783 135.251783,120.142134 135.251783,83 Z" id="Rectangle-3-Copy-3" fill="#7A7A87" sketch:type="MSShapeGroup"></path>
+                <path d="M1,83 L68,83 L68,150 C30.9969218,150 1,120.003078 1,83 Z" id="Rectangle-3-Copy-4" fill="#C2C3C9" sketch:type="MSShapeGroup"></path>
+            </g>
+        </g>
+    </g>
+</svg>

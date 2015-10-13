@@ -20,14 +20,14 @@ gulp.task('serve', function() {
     browserSync.init({
         server: "./"
     });
-    gulp.watch("./assets/scss/*.scss", ['sass']);
+    gulp.watch("./landingpage/scss/*.scss", ['sass']);
     gulp.watch("./*.html").on('change', browserSync.reload);
 });
 
 // 3. Sass Task
 gulp.task('sass', function() {
     // Feed the source
-    return gulp.src('./assets/scss/*.scss')
+    return gulp.src('./landingpage/scss/*.scss')
         // What do do with the files?
         .pipe(sass())
         // Log the errors
@@ -35,7 +35,7 @@ gulp.task('sass', function() {
         // Autoprefix the stuff
         .pipe(autoprefixer('last 4 versions'))
         // Where is the file going to go?
-        .pipe(gulp.dest('./assets/css'))
+        .pipe(gulp.dest('./landingpage/css'))
         // Browser Sync
         .pipe(browserSync.stream());
 });

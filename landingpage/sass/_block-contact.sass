@@ -1,0 +1,28 @@
+// Contact Block
+// =============
+// section.contact | section#contact
+section.contact
+  @extend %block
+  @extend %blockHalf
+  header
+    text-align: center
+  div.left
+    margin-top: $spacingBase
+  iframe
+    border: 1px solid $borderColor
+    border-radius: $borderRadius
+    box-shadow: $z2-shadow
+  li
+    margin-bottom: $spacingSM
+  @media screen and (max-width: $bpSM)
+    div
+      float: none
+      display: block
+      width: 100%
+    .left h3,
+    iframe,
+    .right
+      display: none
+      visibility: hidden
+    li
+      text-align: center

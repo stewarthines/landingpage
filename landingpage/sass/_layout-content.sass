@@ -1,0 +1,28 @@
+// Generic Non-Block Content
+//==========================
+// This is for things like the FAQ
+header.page-header
+  @extend %block
+  padding: 7rem 0 $spacingBase
+  margin-top: 76px
+  background-color: $brand61x2
+  div
+    @extend %wrapper
+
+section.two-column
+  @extend %block
+  article
+    @extend %wrapper
+    div.sidebar
+      @extend %cell
+      width: 25%
+    div.content
+      @extend %cell
+      width: 75%
+      padding-left: $spacingBase
+
+aside
+  border: 1px solid $borderColor
+  border-radius: $borderRadius
+  background-color: $brand6
+  box-shadow: $z1-shadow

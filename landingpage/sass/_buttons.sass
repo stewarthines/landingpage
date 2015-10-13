@@ -1,0 +1,40 @@
+// Buttons
+//========
+// Stewart Hines September 2015
+
+.btn,
+button,
+a.btn
+  display: inline-block
+  padding: 0.625rem 1rem
+  color: $brandBase
+  font-size: 1rem
+  font-weight: 500
+  line-height: 1.5rem
+  text-align: center
+  text-decoration: none
+  text-shadow: none
+  text-transform: uppercase
+  cursor: pointer
+  outline: none
+  border: 1px solid $borderColor
+  border-radius: $borderRadius
+  box-shadow: $z1-shadow
+  background: $brand6
+  transition: box-shadow 300ms ease-in-out
+  &:hover
+    transition: box-shadow 300ms ease-in-out
+    box-shadow: $z2-shadow
+  &:active
+    transition: box-shadow 300ms ease-in-out
+    box-shadow: $inset-z1-shadow
+  @media screen and (max-width: $bpSM)
+    width: 100%
+    margin-bottom: $spacingSM
+
+.btn.btn-brand,
+%btn-brand
+  color: white
+  letter-spacing: 0.2rem
+  background: $brand61x2
+  border-color: transparent
